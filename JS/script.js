@@ -3,7 +3,6 @@ function computerPlay() {
   const randomOption = options[Math.floor(Math.random() * options.length)];
   return randomOption;
 }
-
 function playRound(player, computer) {
   var player = player.toLowerCase();
   var computer = computer.toLowerCase();
@@ -36,19 +35,14 @@ function playRound(player, computer) {
     return "It's a Tie!";
   }
 }
-
 function testing() {
   const playerSelection = "Rock";
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
 }
-
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
-//function to determine whether input is valid
-function inputValid(string) {}
-
 function game() {
   let counter1 = 0;
   let counter2 = 0;
@@ -68,7 +62,6 @@ function game() {
       playerSelection != "Paper" &&
       playerSelection != "Scissors"
     );
-
     console.log("<!----- Game " + games + " has started -----> ");
     console.log("Player is " + playerSelection);
     console.log("Computer is " + computerSelection);
