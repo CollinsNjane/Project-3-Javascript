@@ -25,13 +25,7 @@ function playRound(player, computer) {
   if (player == "paper" && computer == "scissors") {
     return "You Lose! Scissors beats Paper!";
   }
-  if (player == "scissors" && computer == "scissors") {
-    return "It's a Tie!";
-  }
-  if (player == "rock" && computer == "rock") {
-    return "It's a Tie!";
-  }
-  if (player == "paper" && computer == "paper") {
+  if (player == computer) {
     return "It's a Tie!";
   }
 }
