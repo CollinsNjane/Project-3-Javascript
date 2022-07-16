@@ -6,7 +6,6 @@ function computerPlay() {
 function playRound(player, computer) {
   var player = player.toLowerCase();
   var computer = computer.toLowerCase();
-
   if (player == "rock" && computer == "scissors") {
     return "You Win! Rock beats Scissors!";
   }
