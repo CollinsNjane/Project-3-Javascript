@@ -46,10 +46,10 @@ function testing() {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+//function to determine whether input is valid
+function inputValid(string) {}
 
 function game() {
-  let word = "";
-  let sentence = "";
   let counter1 = 0;
   let counter2 = 0;
   let wins = 0;
@@ -57,46 +57,33 @@ function game() {
   let losses = 0;
   let games = 1;
   for (let i = 0; i < 5; i++) {
-    var computerSelection = computerPlay();
-    var playerSelection = capitalizeFirstLetter(
+    let computerSelection = computerPlay();
+    let playerSelection = capitalizeFirstLetter(
       window.prompt("Enter a choice between rock, paper or scissors", "")
     );
-
     console.log("<!----- Game " + games + " has started -----> ");
     console.log("Player is " + playerSelection);
     console.log("Computer is " + computerSelection);
-
-    sentence = playRound(playerSelection, computerSelection);
+    let sentence = playRound(playerSelection, computerSelection);
     console.log(sentence);
-
-    word = sentence.split(" ");
-    //console.log(word[1]);
+    let word = sentence.split(" ");
     if (word[1] == "Win!") {
       counter1++;
       wins++;
-      //console.clear();
       console.log("You have won round " + games);
-
-      word = "";
     }
     if (word[1] == "Lose!") {
       counter2++;
       losses++;
-      //console.clear();
       console.log("You have lost round " + games);
-
-      word = "";
     }
     if (word[2] == "Tie!") {
       ties++;
       console.log("Round " + games + " was a tie");
-
-      word = "";
     }
     console.log("<!----- Game " + games + " has ended -----> ");
     console.log("");
     games++;
-    //output3.innerHTML = playRound(playerSelection, computerSelection);
   }
   if (counter2 > counter1) {
     console.log("You lost the game of 5 rounds");
