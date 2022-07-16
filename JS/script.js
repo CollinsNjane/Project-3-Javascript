@@ -92,7 +92,7 @@ function game() {
   if (counter1 > counter2) {
     console.log("You Won the game of 5 rounds");
   }
-  if (counter2 == counter1) {
+  if (counter1 == 0 && counter2 == 0) {
     console.log("There was no winner, you tied all the 5 rounds");
   }
   console.log("You won " + wins + " times!");
