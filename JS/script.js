@@ -45,7 +45,7 @@ function game() {
   for (let i = 0; i < 5; i++) {
     let computerSelection = computerPlay();
     do {
-      playerSelection = window.prompt("Please enter a choice!", "");
+      playerSelection = window.prompt("Rock, Paper Scissors?!", "");
     } while (
       playerSelection.toLowerCase() != "rock" &&
       playerSelection.toLowerCase() != "paper" &&
