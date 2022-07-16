@@ -52,9 +52,9 @@ function game() {
         window.prompt("Please enter a choice!", "")
       );
     } while (
-      playerSelection.toLowerCase() != "Rock" &&
-      playerSelection.toLowerCase() != "Paper" &&
-      playerSelection.toLowerCase() != "Scissors"
+      playerSelection.toLowerCase() != "rock" &&
+      playerSelection.toLowerCase() != "paper" &&
+      playerSelection.toLowerCase() != "scissors"
     );
     console.log("<!----- Game " + games + " has started -----> ");
     console.log("Player is " + playerSelection);
