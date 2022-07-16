@@ -34,9 +34,6 @@ function testing() {
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
 }
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
 function game() {
   let counter1 = 0;
   let counter2 = 0;
@@ -44,13 +41,11 @@ function game() {
   let ties = 0;
   let losses = 0;
   let games = 1;
-  window.alert("Enter a choice between rock, paper or scissors");
+  var playerSelection = "";
   for (let i = 0; i < 5; i++) {
     let computerSelection = computerPlay();
     do {
-      var playerSelection = capitalizeFirstLetter(
-        window.prompt("Please enter a choice!", "")
-      );
+      playerSelection = window.prompt("Please enter a choice!", "");
     } while (
       playerSelection.toLowerCase() != "rock" &&
       playerSelection.toLowerCase() != "paper" &&
@@ -93,3 +88,4 @@ function game() {
   console.log("You lost " + losses + " times!");
   console.log("You tied " + ties + " times!");
 }
+game();
