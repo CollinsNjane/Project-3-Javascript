@@ -56,11 +56,19 @@ function game() {
   let ties = 0;
   let losses = 0;
   let games = 1;
+  window.alert("Enter a choice between rock, paper or scissors");
   for (let i = 0; i < 5; i++) {
     let computerSelection = computerPlay();
-    let playerSelection = capitalizeFirstLetter(
-      window.prompt("Enter a choice between rock, paper or scissors", "")
+    do {
+      var playerSelection = capitalizeFirstLetter(
+        window.prompt("Please enter a choice!", "")
+      );
+    } while (
+      playerSelection != "Rock" &&
+      playerSelection != "Paper" &&
+      playerSelection != "Scissors"
     );
+
     console.log("<!----- Game " + games + " has started -----> ");
     console.log("Player is " + playerSelection);
     console.log("Computer is " + computerSelection);
