@@ -93,3 +93,4 @@ function game() {
   console.log("You lost " + losses + " times!");
   console.log("You tied " + ties + " times!");
 }
+game();
