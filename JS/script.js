@@ -4,8 +4,8 @@ function computerPlay() {
   return randomOption;
 }
 function playRound(player, computer) {
-  var player = player.toLowerCase();
-  var computer = computer.toLowerCase();
+  let player = player.toLowerCase();
+  let computer = computer.toLowerCase();
   if (player == "rock" && computer == "scissors") {
     return "You Win! Rock beats Scissors!";
   }
@@ -40,7 +40,7 @@ function game() {
   let ties = 0;
   let losses = 0;
   let games = 1;
-  var playerSelection = "";
+  let playerSelection = "";
   for (let i = 0; i < 5; i++) {
     let computerSelection = computerPlay();
     do {
