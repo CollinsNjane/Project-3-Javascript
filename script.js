@@ -55,18 +55,20 @@ function game() {
   let wins = 0;
   let ties = 0;
   let losses = 0;
-  var games = 1;
+  let games = 1;
   for (let i = 0; i < 5; i++) {
     var computerSelection = computerPlay();
     var playerSelection = capitalizeFirstLetter(
-      window.prompt("Enter a choice between rock, paper or scissors")
+      window.prompt("Enter a choice between rock, paper or scissors", "")
     );
+
     console.log("<!----- Game " + games + " has started -----> ");
     console.log("Player is " + playerSelection);
     console.log("Computer is " + computerSelection);
 
     sentence = playRound(playerSelection, computerSelection);
     console.log(sentence);
+
     word = sentence.split(" ");
     //console.log(word[1]);
     if (word[1] == "Win!") {
