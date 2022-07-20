@@ -3,9 +3,9 @@ function computerPlay() {
   const randomOption = options[Math.floor(Math.random() * options.length)];
   return randomOption;
 }
-function playRound(player, computer) {
-  let player = player.toLowerCase();
-  let computer = computer.toLowerCase();
+function playRound(playerParam, computerParam) {
+  let player = playerParam.toLowerCase();
+  let computer = computerParam.toLowerCase();
   if (player == "rock" && computer == "scissors") {
     return "You Win! Rock beats Scissors!";
   }
